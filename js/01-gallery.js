@@ -15,6 +15,14 @@ const listTmpl = `
 const galleryLst = document.querySelector(".gallery");
 galleryLst.insertAdjacentHTML("beforeend", listTmpl);
 
-galleryLst.addEventListener('click', showOriginalImage);
+galleryLst.addEventListener('click', showOriginalImg);
+
+function showOriginalImg(event) {
+   event.preventDefault();
+   if(event.target.nodeName !== "IMG") return ;
+
+   const selectImg = event.target.dataset.index;
+
+}
 
 console.log(galleryItems);
