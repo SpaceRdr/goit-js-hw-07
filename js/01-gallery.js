@@ -36,4 +36,6 @@ function showOriginalImg(event) {
    });
 }
 
+
+
 console.log(galleryItems);
