@@ -23,6 +23,11 @@ function showOriginalImg(event) {
 
    const selectImg = event.target.dataset.index;
 
+   const examp = basicLightbox.create(
+      `<img src="${selectImg}">`
+   );
+
+   examp.show();
 }
 
 console.log(galleryItems);
