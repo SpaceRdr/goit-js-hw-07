@@ -18,16 +18,22 @@ galleryLst.insertAdjacentHTML("beforeend", listTmpl);
 galleryLst.addEventListener('click', showOriginalImg);
 
 function showOriginalImg(event) {
+   console.dir(event.target);
    event.preventDefault();
+   
    if(event.target.nodeName !== "IMG") return ;
 
    const selectImg = event.target.dataset.index;
 
    const examp = basicLightbox.create(
-      `<img src="${selectImg}">`
+      `<img src="${selectImg}" width="800">`
    );
 
    examp.show();
+   galleryCell.addEventListener("keydown", (evt) => {
+      if(evt.code === 'Escape') examp.close();
+
+   });
 }
 
 console.log(galleryItems);
