@@ -33,7 +33,7 @@ function showOriginalImg(event) {
    console.log("examp", examp);
 
    examp.show();
-   galleryCell.addEventListener("keydown", (evt) => {
+   galleryLst.addEventListener("keydown", (evt) => {
       if(evt.code === 'Escape') examp.close();
 
    });
