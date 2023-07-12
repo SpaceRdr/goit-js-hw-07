@@ -12,6 +12,7 @@ const galleryCell = galleryItems.map((img, ind) => {
 
 const listTmpl = `
    <div class="image-list">${galleryCell.joim('')}</div>`;
+   
 const galleryLst = document.querySelector(".gallery");
 galleryLst.insertAdjacentHTML("beforeend", listTmpl);
 
