@@ -5,7 +5,7 @@ const galleryCell = galleryItems.map((img, ind) => {
    return `<li class = "gallery__item">
    <a href="${img.original}" class = "gallery__link">
       <img class = "gallery__image" data-index="${ind}" 
-      src="${img.preview}" alt="${img.description}"
+      src="${img.preview}" alt="${img.description}"/>
    </a>
    </li>`;
 })
