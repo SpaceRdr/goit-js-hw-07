@@ -12,7 +12,7 @@ const galleryCell = galleryItems.map((img, ind) => {
 console.log('galleryCell ', galleryCell);
 
 const listTmpl = `
-   <div class="image-list">${galleryCell.join('')}</div>`;
+   ${galleryCell.join(' ')}`;
    
 const galleryLst = document.querySelector(".gallery");
 galleryLst.insertAdjacentHTML("beforeend", listTmpl);
