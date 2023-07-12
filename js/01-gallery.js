@@ -20,7 +20,7 @@ galleryLst.insertAdjacentHTML("beforeend", listTmpl);
 galleryLst.addEventListener('click', showOriginalImg);
 
 function showOriginalImg(event) {
-   console.dir("event.target ", event.target);
+   console.log("event.target ", event.target);
    event.preventDefault();
    console.log("event.target.nodeName ", event.target.nodeName);
    if(event.target.nodeName !== "IMG") return ;
