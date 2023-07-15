@@ -26,8 +26,8 @@ const galleryLst = document.querySelector(".gallery");
 galleryLst.insertAdjacentHTML("beforeend", listTmpl);
 
 const lightboxView = new SimpleLightbox('gallery a', {
-   captionsData: 'alt';
-   captionDelay: 250;
+   captionsData: 'alt',
+   captionDelay: 250,
 });
 
 console.log(galleryItems);
