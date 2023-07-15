@@ -25,32 +25,35 @@ const listTmpl = `
 const galleryLst = document.querySelector(".gallery");
 galleryLst.insertAdjacentHTML("beforeend", listTmpl);
 
-const lightboxView = new SimpleLightbox('gallery a', {
-   captionsData: 'alt',
-   captionDelay: 250,
-});
-
 console.log(galleryItems);
-// galleryLst.addEventListener('click', showOriginalImg);
+galleryLst.addEventListener('click', showOriginalImg);
 
-// function showOriginalImg(event) {
-//    console.log("event.target ", event.target);
-//    event.preventDefault();
-//    console.log("event.target.nodeName ", event.target.nodeName);
-//    if(event.target.nodeName !== "IMG") return ;
+function showOriginalImg(event) {
+   console.log("event.target ", event.target);
+   event.preventDefault();
+   console.log("event.target.nodeName ", event.target.nodeName);
+   if(event.target.nodeName !== "IMG") return ;
 
-//    const selectImg = event.target.dataset.index;
-//    console.log("event.target.dataset.index", event.target.dataset.index);
-//    const examp = basicLightbox.create(
-//       `<img src="${galleryItems[selectImg].original}" width="800">`
-//    );
-//    console.log("examp", examp);
+   const selectImg = event.target.dataset.index;
+   console.log("event.target.dataset.index", 
+      event.target.dataset.index);
 
-//    examp.show();
-//    galleryLst.addEventListener("keydown", (evt) => {
-//       if(evt.code === 'Escape') examp.close();
+      const lightboxView = new SimpleLightbox('gallery a', {
+         captionsData: 'alt',
+         captionDelay: 250,
+      });
 
-//    });
-// }
+      console.log("lightboxView", lightboxView);
+   // const examp = basicLightbox.create(
+   //    `<img src="${galleryItems[selectImg].original}" width="800">`
+   // );
+   // console.log("examp", examp);
+   
+   // examp.show();
+   // galleryLst.addEventListener("keydown", (evt) => {
+   //    if(evt.code === 'Escape') examp.close();
+
+   // });
+}
 
 
