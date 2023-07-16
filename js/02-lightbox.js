@@ -38,7 +38,7 @@ function showOriginalImg(event) {
    console.log("event.target.dataset.index", 
       event.target.dataset.index);
 
-      const lightboxView = new SimpleLightbox('gallery a', {
+      const lightboxView = new SimpleLightbox('.gallery a', {
          captionsData: 'alt',
          captionDelay: 250,
       });
