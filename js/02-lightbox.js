@@ -25,25 +25,32 @@ const listTmpl = `
 const galleryLst = document.querySelector(".gallery");
 galleryLst.insertAdjacentHTML("beforeend", listTmpl);
 
-console.log(galleryItems);
-galleryLst.addEventListener('click', showOriginalImg);
+const lightbox = new SimpleLightbox('.gallery a', {
+   captionsData: 'alt',
+   captionDelay: 250,
+   captionPosition: 'bottom'
+   
+});
 
-function showOriginalImg(event) {
-   console.log("event.target ", event.target);
-   event.preventDefault();
-   console.log("event.target.nodeName ", event.target.nodeName);
-   if(event.target.nodeName !== "IMG") return ;
+// console.log(galleryItems);
+// galleryLst.addEventListener('click', showOriginalImg);
 
-   const selectImg = event.target.dataset.index;
-   console.log("event.target.dataset.index", 
-      event.target.dataset.index);
+// function showOriginalImg(event) {
+//    console.log("event.target ", event.target);
+//    event.preventDefault();
+//    console.log("event.target.nodeName ", event.target.nodeName);
+//    if(event.target.nodeName !== "IMG") return ;
 
-      const lightbox = new SimpleLightbox('.gallery a', {
-         captionsData: 'alt',
-         captionDelay: 250,
-         captionPosition: 'bottom'
+//    const selectImg = event.target.dataset.index;
+//    console.log("event.target.dataset.index", 
+//       event.target.dataset.index);
+
+//       const lightbox = new SimpleLightbox('.gallery a', {
+//          captionsData: 'alt',
+//          captionDelay: 250,
+//          captionPosition: 'bottom'
          
-      });
+//       });
 
       console.log("lightboxView", lightbox);
    // const examp = basicLightbox.create(
@@ -56,6 +63,6 @@ function showOriginalImg(event) {
    //    if(evt.code === 'Escape') examp.close();
 
    // });
-}
+//}
 
 
