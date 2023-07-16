@@ -9,7 +9,6 @@ const galleryCell = galleryItems.map((img, ind) => {
    </a>
    </li>`;
 })
-console.log('galleryCell ', galleryCell);
 
 const listTmpl = `
    ${galleryCell.join(' ')}`;
@@ -22,7 +21,6 @@ galleryLst.addEventListener('click', showOriginalImg);
 function showOriginalImg(event) {
    console.log("event.target ", event.target);
    event.preventDefault();
-   console.log("event.target.nodeName ", event.target.nodeName);
    if(event.target.nodeName !== "IMG") return ;
 
    const selectImg = event.target.dataset.index;
@@ -30,8 +28,7 @@ function showOriginalImg(event) {
    const examp = basicLightbox.create(
       `<img src="${galleryItems[selectImg].original}" width="800">`
    );
-   console.log("examp", examp);
-
+   
    examp.show();
    galleryLst.addEventListener("keydown", (evt) => {
       if(evt.code === 'Escape') examp.close();
