@@ -38,12 +38,13 @@ function showOriginalImg(event) {
    console.log("event.target.dataset.index", 
       event.target.dataset.index);
 
-      const lightboxView = new SimpleLightbox('.gallery a', {
+      const lightbox = new SimpleLightbox('.gallery a', {
          captionsData: 'alt',
          captionDelay: 250,
+         captionPosition: 'bottom'
       });
 
-      console.log("lightboxView", lightboxView);
+      console.log("lightboxView", lightbox);
    // const examp = basicLightbox.create(
    //    `<img src="${galleryItems[selectImg].original}" width="800">`
    // );
