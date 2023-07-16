@@ -52,7 +52,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
          
 //       });
 
-      console.log("lightboxView", lightbox);
+      //console.log("lightboxView", lightbox);
    // const examp = basicLightbox.create(
    //    `<img src="${galleryItems[selectImg].original}" width="800">`
    // );
