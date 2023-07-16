@@ -4,7 +4,7 @@ import { galleryItems } from './gallery-items.js';
 console.log("galleryItems", galleryItems);
 const galleryCell = galleryItems.map((img, ind) => {
    return `<li class = "gallery__item">
-   <a href="${img.original}" class = "gallery__link">
+   <a href="${img.original}">
       <img class = "gallery__image" data-index="${ind}" 
       src="${img.preview}" alt="${img.description}" 
       title ="${img.description}"/>
@@ -17,10 +17,16 @@ const galleryCell = galleryItems.map((img, ind) => {
       <img class="gallery__image" src="small-image.jpg" alt="Image description" />
    </a>
 </li> */
+/* <a href="${img.original}" class = "gallery__link">
+      <img class = "gallery__image" data-index="${ind}" 
+      src="${img.preview}" alt="${img.description}" 
+      title ="${img.description}"/>
+   </a>
+   </li>`; */
 console.log('galleryCell ', galleryCell);
 
 const listTmpl = `
-   ${galleryCell.join(' ')}`;
+   ${galleryCell.join('')}`;
    
 const galleryLst = document.querySelector(".gallery");
 galleryLst.insertAdjacentHTML("beforeend", listTmpl);
