@@ -42,6 +42,7 @@ function showOriginalImg(event) {
          captionsData: 'alt',
          captionDelay: 250,
          captionPosition: 'bottom'
+         
       });
 
       console.log("lightboxView", lightbox);
