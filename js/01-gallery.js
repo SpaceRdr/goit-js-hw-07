@@ -37,4 +37,5 @@ function showOriginalImg(event) {
 }
 
 galleryLst.removeEventListener("click", showOriginalImg);
+console.log(galleryLst);
 console.log(galleryItems);
