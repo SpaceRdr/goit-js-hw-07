@@ -26,20 +26,33 @@ function showOriginalImg(event) {
    const selectImg = event.target.dataset.index;
    console.log("event.target.dataset.index", event.target.dataset.index);
    const examp = basicLightbox.create(
-      `<img src="${galleryItems[selectImg].original}" width="800">`
+      `<img src="${galleryItems[selectImg].original}" width="800">`,
+      {
+         onShow: (examp) => {
+            galleryLst.addEventListener('keydown', escKeyPush);
+         },
+         onClose: (examp) => {
+            galleryLst.removeEventListener('keydown', escKeyPush);
+         },
+       }
    );
    
    examp.show();
-   galleryLst.addEventListener("keydown", (evt) => {
-      if(evt.code === 'Escape') 
-      {
-         examp.close();
-         galleryLst.removeEventListener("keydown", evt);
-      }
-   });
+   // galleryLst.addEventListener("keydown", (evt) => {
+   //    if(evt.code === 'Escape') 
+   //    {
+   //       examp.close();
+   //       galleryLst.removeEventListener("keydown", evt);
+   //    }
+   // });
 
    // galleryLst.removeEventListener("click", showOriginalImg);
 }
 
+function escKeyPush (evt) {
+   if(evt.code !== 'Escape')  return;
+   else
+      examp.close();
+}
 console.log(galleryLst);
 console.log(galleryItems);
