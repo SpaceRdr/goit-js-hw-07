@@ -29,7 +29,6 @@ function showOriginalImg(event) {
       `<img src="${galleryItems[selectImg].original}" width="800">`
    );
    
-
    examp.show();
    galleryLst.addEventListener("keydown", (evt) => {
       if(evt.code === 'Escape') 
