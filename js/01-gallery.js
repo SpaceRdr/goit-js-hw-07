@@ -34,10 +34,9 @@ function showOriginalImg(event) {
       if(evt.code === 'Escape') examp.close();
 
    });
-   
-   galleryLst.removeEventListener("click", showOriginalImg);
-}
 
+   // galleryLst.removeEventListener("click", showOriginalImg);
+}
 
 console.log(galleryLst);
 console.log(galleryItems);
