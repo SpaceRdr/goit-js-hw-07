@@ -20,7 +20,8 @@ galleryLst.addEventListener('click', showOriginalImg);
 
 function showOriginalImg(event) {
    console.log("event.target ", event.target);
-   console.dir("event.target ", event.target);
+   console.dir("event.target dir ", event.target);
+   console.table("event.target table ", event.target);
    event.preventDefault();
    if(event.target.nodeName !== "IMG") return ;
 
