@@ -31,8 +31,11 @@ function showOriginalImg(event) {
    
    examp.show();
    galleryLst.addEventListener("keydown", (evt) => {
-      if(evt.code === 'Escape') examp.close();
-
+      if(evt.code === 'Escape') 
+      {
+         examp.close();
+         galleryLst.removeEventListener("keydown", evt);
+      }
    });
 
    // galleryLst.removeEventListener("click", showOriginalImg);
